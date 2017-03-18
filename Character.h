@@ -11,10 +11,8 @@ class Character
 	//Overload output operator
 	friend ostream &operator<<(ostream &, const Character &);
 public:
-	// Default constructor
-	Character();
 	// Constructor
-	Chatacter(const string &, char);
+	Character(const string & = "unknown", const string & = "MALE");
 	// Copy constructor
 	Character(const Character &);
 	// Destructor
@@ -32,8 +30,8 @@ public:
 	void printInfo();
 private:
 	string name;
-	const char sex;
-	static const RACE = "Human";
+	const string sex;
+	static const string RACE;
 	static int numberChars;
 };
 
