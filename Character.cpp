@@ -9,6 +9,8 @@ using std::string;
 int Character::numberChars = 0;
 const string Character::RACE = "Human";
 
+// Default constructor
+
 // Constructor
 Character::Character(const string &nam, const string &gen)
 :sex(gen), name(nam)
@@ -29,7 +31,7 @@ Character::~Character()
 //	cout << "~Character() called" << endl;
 }
 
-// Overload opperator <<
+// Overload << opperator
 ostream &operator<< (ostream &output, const Character &character)
 {
 	output << character.name << 
@@ -37,7 +39,7 @@ ostream &operator<< (ostream &output, const Character &character)
 	return output;
 }
 
-// Overload operator ==
+// Overload == operator 
 bool Character::operator== (const Character &character) const
 {
 	if (this->name == character.name)

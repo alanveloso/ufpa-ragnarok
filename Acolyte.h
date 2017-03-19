@@ -16,7 +16,7 @@ public:
 	// Default constructor
 	Acolyte();
 	// Constructor
-	Acolyte(const string &, char, const Data &, const Skill &, int, int, const Skill &);
+	Acolyte(const string &, const string &, const Date &, const Skill &, int, int, const Skill &);
 	// Copy constructor
 	Acolyte(const Acolyte &);
 	// Destructor
@@ -37,11 +37,11 @@ public:
 	// Skill blessing
 	void blessing() const;
 	// Add skill of acolyte skill list
-	void addSkill();
+	void addSkill(const Skill &);
 private:
 	int skillNumber;
-	Skill yourAcolyteSkillList[];
-	string availableAcolyteSkills;
+	Skill *yourAcolyteSkillList;
+	static const string AVAILABLE_ACOLYTE_SKILLS[2];
 };
 
 #endif /* _ACOLYTE_H__*/

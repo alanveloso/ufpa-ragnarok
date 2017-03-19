@@ -19,7 +19,7 @@ public:
 	// Default constructor
 	Novice();
 	// Constructor
-	Novice(const string &, char, const Date &, const Skill &, int points);
+	Novice(const string &, const string &, const Date &, const Skill &, int points);
 	// Copy constructor
 	Novice(const Novice &);
 	// Destructor
@@ -40,7 +40,11 @@ public:
 	// Skill play dead
 	void playDead() const;
 	// Add skill of skill list
-	void addSkill();
+	void addSkill(const Skill &);
+	// Return skill points
+	int getSkillPoints() const;
+	// Set skill points
+	void setSkillPoints(int);
 private:
 	static int numberOfSkills;
 	int skillPoints;
