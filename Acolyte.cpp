@@ -12,7 +12,7 @@ const string Acolyte::AVAILABLE_ACOLYTE_SKILLS[2] = {"Cure","Blessing"};
 
 // Default Constructor
 Acolyte::Acolyte()
-:Novice() 
+:Novice()
 {
 	this->skillNumber = 0;
 	this->yourAcolyteSkillList = new Skill[1];
@@ -20,7 +20,7 @@ Acolyte::Acolyte()
 
 // Constructor
 Acolyte::Acolyte(const string &name, const string &sex, const Date &created, const Skill &skill, int points, int number, const Skill &acolyteSkill)
-:Novice(name, sex, created, skill, points) 
+:Novice(name, sex, created, skill, points)
 {
 	if (number < 0)
 		this->skillNumber = skillNumber;
@@ -35,7 +35,7 @@ Acolyte::Acolyte(const string &name, const string &sex, const Date &created, con
 
 // Copy Constructor
 Acolyte::Acolyte(const Acolyte &acolyte)
-:Novice(static_cast<Novice> (acolyte)) 
+:Novice(static_cast<Novice> (acolyte))
 {
 	this->skillNumber = acolyte.skillNumber;
 	for (int i = 0; i < this->skillNumber; i++)
@@ -66,7 +66,7 @@ ostream &operator<< (ostream &output, const Acolyte &acolyte)
 // Overload == operator 
 bool Acolyte::operator== (const Acolyte &acolyte) const
 {
-	if (static_cast< Novice >(*this) != static_cast<Novice> (acolyte))	
+	if (static_cast< Novice >(*this) != static_cast<Novice> (acolyte))
 		return false;
 	if (this->skillNumber == acolyte.skillNumber)
 		return false;
@@ -128,12 +128,10 @@ void Acolyte::addSkill(const Skill &skill)
 		delete [] this->yourAcolyteSkillList;
 		this->skillNumber++;
 		this->yourAcolyteSkillList = new Skill[this->skillNumber];
-		
 		for(int i = 0; i < this->skillNumber--; i++)
 			this->yourAcolyteSkillList[i] = aux[i];
 
 		this->yourAcolyteSkillList[skillNumber--] = skill;
-		
 		(*this).setSkillPoints(skillPoints--);
 
 		delete [] aux;

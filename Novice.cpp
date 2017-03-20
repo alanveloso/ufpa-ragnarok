@@ -85,7 +85,7 @@ const Novice &Novice::operator= (const Novice &novice)
 void Novice::printInfo() const
 {
 	cout << "Job Type:\tNovice" << endl;
-	cout << "Race:\t" << Novice::getRace << endl;
+	cout << "Race:\tHuman" << endl;
 	cout << "Changer At:\tTraning Grounds" << endl;
 	cout << "Total Skill Points:\t9" << endl;
 	cout << "Total Quest Skills: 2" << endl;

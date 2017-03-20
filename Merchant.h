@@ -16,7 +16,7 @@ public:
 	// Default constructor
 	Merchant();
 	// Constructor
-	Merchant(const string &, char, const Data &, const Skill &, int, int, const Skill &);
+	Merchant(const string &, const string &, const Date &, const Skill &, int, int, const Skill &);
 	// Copy constructor
 	Merchant(const Merchant &);
 	// Destructor
@@ -37,11 +37,11 @@ public:
 	// Skill vending
 	void vending() const;
 	// Add skill of merchant skill list
-	void addSkill();
+	void addSkill(const Skill &);
 private:
 	int skillNumber;
-	Skill yourMerchantSkillList[];
-	string availableMerchantSkills;
+	Skill *yourMerchantSkillList;
+	static const string AVAILABLE_MERCHANT_SKILLS[2];
 };
 
 #endif /* _MERCHANT_H__*/

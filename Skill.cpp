@@ -13,7 +13,7 @@ Skill::Skill()
 }
 
 //Copy constructor
-Skill::Skill(const User &skillCopy)
+Skill::Skill(const Skill &skillCopy)
 {
 	this->skillName = skillCopy.skillName;
 	this->maxLevel = skillCopy.maxLevel;
@@ -35,20 +35,20 @@ Skill::~Skill()
 }
 
 // Overload << operator
-ostream &operator<<(ostream &output, const Skill &user)
+ostream &operator<<(ostream &output, const Skill &skill)
 {
-	output << "\t" << user.skillName << "\nLevels:\t" << user.maxLevel << "\nType:\t" << user.type  << endl;
+	output << "\t" << skill.skillName << "\nLevels:\t" << skill.maxLevel << "\nType:\t" << skill.type  << endl;
 	return output;
 }
 
 // Overload == operator
-bool Skill::operator== (const Skill &user) const
+bool Skill::operator== (const Skill &skill) const
 {
-	if (this->skillName == user.skillName)
+	if (this->skillName == skill.skillName)
 		return false;
-	if (this->maxLevel == user.maxLevel)
+	if (this->maxLevel == skill.maxLevel)
 		return false;
-	if (this->type == user.type)
+	if (this->type == skill.type)
 		return false;
 	
 	return true;
@@ -56,11 +56,11 @@ bool Skill::operator== (const Skill &user) const
 
 
 // Overload = operator
-const Skill &Skill::operator= (const User &user)
+const Skill &Skill::operator= (const Skill &skill)
 {
-	this->skillName = user.skillName;
-	this->maxLevel = user.maxLevel;
-	this->type = user.type;
+	this->skillName = skill.skillName;
+	this->maxLevel = skill.maxLevel;
+	this->type = skill.type;
 	
 	return *this;
 }

@@ -16,7 +16,7 @@ public:
 	// Default constructor
 	Mage();
 	// Constructor
-	Mage(const string &, char, const Data &, const Skill &, int, int, const Skill &);
+	Mage(const string &, const string &, const Date &, const Skill &, int, int, const Skill &);
 	// Copy constructor
 	Mage(const Mage &);
 	// Destructor
@@ -37,11 +37,11 @@ public:
 	// Skill thunderstorm
 	void thunderstorm() const;
 	// Add skill of mage skill list
-	void addSkill();
+	void addSkill(const Skill &);
 private:
 	int skillNumber;
-	Skill yourMageSkillList[];
-	string availableMageSkills;
+	Skill *yourMageSkillList;
+	static const string AVAILABLE_MAGE_SKILLS[2];
 };
 
 #endif /* _MAGE_H__*/
