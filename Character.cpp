@@ -57,3 +57,6 @@ const Character &Character::operator= (const Character &character)
 
 	return *this;
 }
+void Character::printInfo()
+{
+}

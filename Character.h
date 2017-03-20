@@ -16,7 +16,7 @@ public:
 	// Copy constructor
 	Character(const Character &);
 	// Destructor
-	~Character();
+	virtual ~Character();
 	// Defined = operator
 	const Character &operator=(const Character &);
 	// Defined == operator
@@ -27,7 +27,7 @@ public:
 		return ! (*this == character);
 	}
 	// Print character info
-	void printInfo();
+	virtual void printInfo();
 private:
 	string name;
 	const string sex;
