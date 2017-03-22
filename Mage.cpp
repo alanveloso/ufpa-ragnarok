@@ -150,7 +150,7 @@ void Mage::useMount() const
 }
 
 // List Available Skills
-void Mage::listAvailableSkill() 
+void Mage::listAvailableSkill() const 
 {
 	cout << "\tAvailable Skills" << endl;
 	for(int i = 0; i < 2; i++)

@@ -56,11 +56,3 @@ const Character &Character::operator= (const Character &character)
 
 	return *this;
 }
-void Character::printInfo() const
-{}
-
-void Character::useMount() const
-{}
-	
-void Character::listAvailableSkill() 
-{}

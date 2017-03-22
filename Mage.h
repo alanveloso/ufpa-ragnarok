@@ -41,7 +41,7 @@ public:
 	// User mage mount
 	void useMount() const;
 	// List additive skill 
-	virtual void listAvailableSkill();
+	void listAvailableSkill() const;
 private:
 	int skillNumber;
 	Skill *yourMageSkillList;

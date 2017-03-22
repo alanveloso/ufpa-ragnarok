@@ -27,11 +27,11 @@ public:
 		return ! (*this == character);
 	}
 	// Print character info
-	virtual void printInfo() const;
+	virtual void printInfo() const = 0;
 	// Use mount
-	virtual void useMount() const;
+	virtual void useMount() const = 0;
 	// List additive skill 
-	virtual void listAvailableSkill();
+	virtual void listAvailableSkill() const = 0;
 private:
 	string name;
 	const string sex;

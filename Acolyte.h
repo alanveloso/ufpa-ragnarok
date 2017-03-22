@@ -41,7 +41,7 @@ public:
 	// User acolyte mount
 	void useMount() const;
 	// List additive skill 
-	virtual void listAvailableSkill();
+	void listAvailableSkill() const;
 private:
 	int skillNumber;
 	Skill *yourAcolyteSkillList;

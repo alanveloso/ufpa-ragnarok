@@ -23,7 +23,7 @@ public:
 	// Copy constructor
 	Novice(const Novice &);
 	// Destructor
-	~Novice();
+	virtual ~Novice();
 	// Defined operator ==
 	bool operator== (const Novice &) const;
 	// Defined operator !=
@@ -34,7 +34,7 @@ public:
 	// Defined = operator
 	const Novice &operator= (const Novice &);
 	// Print Novice Info
-	void printInfo() const;
+	virtual void printInfo() const;
 	// Skill first Aid
 	void firstAid() const;
 	// Skill play dead
@@ -46,9 +46,9 @@ public:
 	// Set skill points
 	void setSkillPoints(int);
 	// Use acolyte mount
-	void useMount() const;
+	virtual void useMount() const;
 	// List additive skill 
-	virtual void listAvailableSkill();
+	virtual void listAvailableSkill() const;
 private:
 	static int numberOfSkills;
 	int skillPoints;

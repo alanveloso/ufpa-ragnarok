@@ -41,7 +41,7 @@ public:
 	// User merchant mount
 	void useMount() const;
 	// List additive skill 
-	virtual void listAvailableSkill() const;
+	void listAvailableSkill() const;
 private:
 	int skillNumber;
 	Skill *yourMerchantSkillList;

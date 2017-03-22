@@ -133,7 +133,7 @@ void Novice::useMount() const
 }
 
 // List Available Skills
-void Novice::listAvailableSkill() 
+void Novice::listAvailableSkill() const 
 {	
 	cout << "\tAvailable Skills" << endl;
 	cout << "Empyt" << endl; 

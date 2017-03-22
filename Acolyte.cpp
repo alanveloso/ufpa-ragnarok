@@ -149,7 +149,7 @@ void Acolyte::useMount() const
 }
 
 // List Available Skills
-void Acolyte::listAvailableSkill() 
+void Acolyte::listAvailableSkill() const 
 {
 	cout << "\tAvailable Skills" << endl;
 	for(int i = 0; i < 2; i++)
