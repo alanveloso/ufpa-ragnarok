@@ -27,7 +27,7 @@ public:
 		return ! (*this == character);
 	}
 	// Print character info
-	virtual void printInfo();
+	virtual void printInfo() const;
 private:
 	string name;
 	const string sex;

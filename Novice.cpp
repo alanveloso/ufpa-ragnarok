@@ -48,7 +48,6 @@ Novice::~Novice()
 ostream &operator<< (ostream &output, const Novice &novice)
 {
 	output << static_cast< Character> (novice) << endl;
-	cout << endl;
 	output << "Skill list" << endl;
 	for (int i = 0; i < novice.noviceSkillList.size(); i++)
 		output << novice.noviceSkillList[i] << " ";
@@ -91,7 +90,7 @@ void Novice::printInfo() const
 	cout << "Total Quest Skills: 2" << endl;
 	cout << "\tJob Bonues" << endl;
 	cout << "STR\tAGI\tVIT\tINT\tDEX\tLUK" << endl;
-	cout << "+0\t+0\t+0\t+0\t\t+0\t+0" << endl;
+	cout << "+0\t+0\t+0\t+0\t+0\t+0" << endl;
 	cout << "\tWeapons" << endl;
 	cout << "Dagger • One Handed Sword" << endl;
 }

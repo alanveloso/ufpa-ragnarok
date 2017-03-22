@@ -28,14 +28,13 @@ Character::Character(const Character &character)
 // Destructor
 Character::~Character()
 {
-//	cout << "~Character() called" << endl;
+	//cout << "~Character() called" << endl;
 }
 
 // Overload << opperator
 ostream &operator<< (ostream &output, const Character &character)
 {
-	output << character.name << 
-	(character.sex == "M")? cout << "\nMale": cout << "\nFemale" << endl;
+	output << "Name:\t\t" << character.name << "\nGender:\t\t" <<character.sex << endl; 
 	return output;
 }
 
@@ -57,6 +56,6 @@ const Character &Character::operator= (const Character &character)
 
 	return *this;
 }
-void Character::printInfo()
+void Character::printInfo() const
 {
 }

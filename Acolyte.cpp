@@ -23,12 +23,12 @@ Acolyte::Acolyte(const string &name, const string &sex, const Date &created, con
 :Novice(name, sex, created, skill, points)
 {
 	if (number < 0)
-		this->skillNumber = skillNumber;
-	else
 	{
 		cout << "Skill Number setted for 1" << endl;
 		this->skillNumber = 1;
 	}
+	else
+		this->skillNumber = number;
 	this->yourAcolyteSkillList = new Skill[this->skillNumber];
 	this->yourAcolyteSkillList[0] = acolyteSkill;
 }
@@ -53,8 +53,7 @@ Acolyte::~Acolyte()
 ostream &operator<< (ostream &output, const Acolyte &acolyte)
 {
 	output << static_cast< Novice> (acolyte) << endl;
-	cout << endl;
-	output << "Skill list" << endl;
+	output << "Acolyte Skill List" << endl;
 	for (int i = 0; i < acolyte.skillNumber; i++)
 		output << acolyte.yourAcolyteSkillList[i] << " ";
 	cout << endl;
@@ -91,15 +90,16 @@ const Acolyte &Acolyte::operator= (const Acolyte &acolyte)
 // Print acolyte info
 void Acolyte::printInfo() const
 {
-	cout << "Job Type:\tAcolyte" << endl;
-	cout << "Race:\t Human" << endl;
-	cout << "Changer At:\tProntera Church" << endl;
+	cout << *this << endl;
+	cout << "Job Type:\t\tAcolyte" << endl;
+	cout << "Race:\t\t\tHuman" << endl;
+	cout << "Changer At:\t\tProntera Church" << endl;
 	cout << "Total Skill Points:\t81" << endl;
-	cout << "Total Quest Skills: 1" << endl;
-	cout << "\tJob Bonues" << endl;
+	cout << "Total Quest Skills:\t1" << endl;
+	cout << "\t\tJob Bonues" << endl;
 	cout << "STR\tAGI\tVIT\tINT\tDEX\tLUK" << endl;
-	cout << "+3\t+2\t+3\t+3\t\t+3\t+4" << endl;
-	cout << "\tWeapons" << endl;
+	cout << "+3\t+2\t+3\t+3\t+3\t+4" << endl;
+	cout << "\t\tWeapons" << endl;
 	cout << "Mace • Rod" << endl;
 }
 

@@ -37,7 +37,7 @@ Skill::~Skill()
 // Overload << operator
 ostream &operator<<(ostream &output, const Skill &skill)
 {
-	output << "\t" << skill.skillName << "\nLevels:\t" << skill.maxLevel << "\nType:\t" << skill.type  << endl;
+	output << "\t" <<skill.skillName << "\nLevels:\t\t" << skill.maxLevel << "\nType:\t\t" << skill.type  << endl;
 	return output;
 }
 

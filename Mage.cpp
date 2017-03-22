@@ -23,12 +23,12 @@ Mage::Mage(const string &name, const string &sex, const Date &created, const Ski
 :Novice(name, sex, created, skill, points)
 {
 	if (number < 0)
-		this->skillNumber = skillNumber;
-	else
 	{
 		cout << "Skill Number setted for 1" << endl;
 		this->skillNumber = 1;
 	}
+	else
+		this->skillNumber = number;
 	this->yourMageSkillList = new Skill[this->skillNumber];
 	this->yourMageSkillList[0] = mageSkill;
 }
@@ -91,15 +91,15 @@ const Mage &Mage::operator= (const Mage &mage)
 // Print mage info
 void Mage::printInfo() const
 {
-	cout << "Job Type:\tMage" << endl;
-	cout << "Race:\t Human" << endl;
-	cout << "Changer At:\tGaffen" << endl;
+	cout << "Job Type:\t\tMage" << endl;
+	cout << "Race:\t\t\tHuman" << endl;
+	cout << "Changer At:\t\tGaffen" << endl;
 	cout << "Total Skill Points:\t121" << endl;
-	cout << "Total Quest Skills: 1" << endl;
-	cout << "\tJob Bonues" << endl;
+	cout << "Total Quest Skills:\t1" << endl;
+	cout << "\t\tJob Bonues" << endl;
 	cout << "STR\tAGI\tVIT\tINT\tDEX\tLUK" << endl;
-	cout << "+0\t+4\t+0\t+8\t\t+3\t+3" << endl;
-	cout << "\tWeapons" << endl;
+	cout << "+0\t+4\t+0\t+8\t+3\t+3" << endl;
+	cout << "\t\tWeapons" << endl;
 	cout << "Dagger • Rod" << endl;
 }
 

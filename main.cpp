@@ -26,10 +26,10 @@ int main()
 
 	vector < Character * > characters( 4 );
 
-	characters[ 0 ] = new Acolyte("Chen Lio", "Male", today, firstAid, 0, 1, cure); 
-	characters[ 1 ] = new Mage("Kathryne Keyron", "Female", yesterday, firstAid, 0, 1, fireWall);
-	characters[ 2 ] = new Merchant("Howard Alt-Eisen", "Male",today, firstAid, 0, 1, vending); 
-	characters[ 3 ] = new Merchant("Al Alt-Eisen", "Male",yesterday, firstAid, 0, 1, vending);
+	characters[ 0 ] = new Acolyte("Chen Lio", "Male", today, firstAid, 1, 1, cure); 
+	characters[ 1 ] = new Mage("Kathryne Keyron", "Female", yesterday, firstAid, 1, 1, fireWall);
+	characters[ 2 ] = new Merchant("Howard Alt-Eisen", "Male",today, firstAid, 1, 1, vending); 
+	characters[ 3 ] = new Merchant("Al Alt-Eisen", "Male",yesterday, firstAid, 1, 1, vending);
 
 	for ( size_t i = 0; i < characters.size(); i++ )
 	{
@@ -39,7 +39,8 @@ int main()
 
 		if ( derivedPtr !=0 )
 		{
-			cout << "I need to rent Pushcart" << endl;
+			cout << endl;
+			cout << "You need to rent Pushcart" << endl;
 			cout << endl;
 
 		} 

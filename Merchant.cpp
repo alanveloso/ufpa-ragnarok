@@ -23,12 +23,12 @@ Merchant::Merchant(const string &name, const string &sex, const Date &created, c
 :Novice(name, sex, created, skill, points) 
 {
 	if (number < 0)
-		this->skillNumber = skillNumber;
-	else
 	{
 		cout << "Skill Number setted for 1" << endl;
 		this->skillNumber = 1;
 	}
+	else
+		this->skillNumber = number;
 	this->yourMerchantSkillList = new Skill[this->skillNumber];
 	this->yourMerchantSkillList[0] = acolyteSkill;
 }
@@ -91,15 +91,15 @@ const Merchant &Merchant::operator= (const Merchant &acolyte)
 // Print acolyte info
 void Merchant::printInfo() const
 {
-	cout << "Job Type:\tMerchant" << endl;
-	cout << "Race:\t Human" << endl;
-	cout << "Changer At:\tAlberta" << endl;
+	cout << "Job Type:\t\tMerchant" << endl;
+	cout << "Race:\t\t\tHuman" << endl;
+	cout << "Changer At:\t\tAlberta" << endl;
 	cout << "Total Skill Points:\t61" << endl;
-	cout << "Total Quest Skills: 3" << endl;
-	cout << "\tJob Bonues" << endl;
+	cout << "Total Quest Skills:\t3" << endl;
+	cout << "\t\tJob Bonues" << endl;
 	cout << "STR\tAGI\tVIT\tINT\tDEX\tLUK" << endl;
-	cout << "+5\t+1\t+4\t+1\t\t+5\t+2" << endl;
-	cout << "\tWeapons" << endl;
+	cout << "+5\t+1\t+4\t+1\t+5\t+2" << endl;
+	cout << "\t\tWeapons" << endl;
 	cout << "Axe • Dagger • Mace • One Handed Sword" << endl;
 }
 
