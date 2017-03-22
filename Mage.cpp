@@ -91,6 +91,7 @@ const Mage &Mage::operator= (const Mage &mage)
 // Print mage info
 void Mage::printInfo() const
 {
+	cout << *this << endl;
 	cout << "Job Type:\t\tMage" << endl;
 	cout << "Race:\t\t\tHuman" << endl;
 	cout << "Changer At:\t\tGaffen" << endl;
@@ -140,4 +141,18 @@ void Mage::addSkill(const Skill &skill)
 	{
 		cout << "I don't have points for distribute" << endl;
 	}
+}
+
+// User mage mount
+void Mage::useMount() const
+{
+	cout << "Nine Tail equiped" << endl;
+}
+
+// List Available Skills
+void Mage::listAvailableSkill() 
+{
+	cout << "\tAvailable Skills" << endl;
+	for(int i = 0; i < 2; i++)
+		cout << AVAILABLE_MAGE_SKILLS[i] << endl;
 }

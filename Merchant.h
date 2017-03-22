@@ -38,6 +38,10 @@ public:
 	void vending() const;
 	// Add skill of merchant skill list
 	void addSkill(const Skill &);
+	// User merchant mount
+	void useMount() const;
+	// List additive skill 
+	virtual void listAvailableSkill() const;
 private:
 	int skillNumber;
 	Skill *yourMerchantSkillList;

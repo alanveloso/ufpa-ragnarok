@@ -83,6 +83,7 @@ const Novice &Novice::operator= (const Novice &novice)
 // Print novice info
 void Novice::printInfo() const
 {
+	cout << *this << endl;
 	cout << "Job Type:\tNovice" << endl;
 	cout << "Race:\tHuman" << endl;
 	cout << "Changer At:\tTraning Grounds" << endl;
@@ -123,4 +124,17 @@ int Novice::getSkillPoints() const
 void Novice::setSkillPoints(int points)
 {
 	this->skillPoints = points;
+}
+
+// User novice mout
+void Novice::useMount() const
+{
+	cout << "Poring equiped" << endl;
+}
+
+// List Available Skills
+void Novice::listAvailableSkill() 
+{	
+	cout << "\tAvailable Skills" << endl;
+	cout << "Empyt" << endl; 
 }

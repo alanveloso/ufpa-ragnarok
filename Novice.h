@@ -45,6 +45,10 @@ public:
 	int getSkillPoints() const;
 	// Set skill points
 	void setSkillPoints(int);
+	// Use acolyte mount
+	void useMount() const;
+	// List additive skill 
+	virtual void listAvailableSkill();
 private:
 	static int numberOfSkills;
 	int skillPoints;

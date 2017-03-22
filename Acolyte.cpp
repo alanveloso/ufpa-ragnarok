@@ -141,3 +141,17 @@ void Acolyte::addSkill(const Skill &skill)
 		cout << "I don't have points for distribute" << endl;
 	}
 }
+
+// User acolyte mount
+void Acolyte::useMount() const
+{
+	cout << "Alpaca equiped" << endl;
+}
+
+// List Available Skills
+void Acolyte::listAvailableSkill() 
+{
+	cout << "\tAvailable Skills" << endl;
+	for(int i = 0; i < 2; i++)
+		cout << AVAILABLE_ACOLYTE_SKILLS[i] << endl;
+}

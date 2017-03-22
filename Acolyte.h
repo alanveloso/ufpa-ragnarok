@@ -38,6 +38,10 @@ public:
 	void blessing() const;
 	// Add skill of acolyte skill list
 	void addSkill(const Skill &);
+	// User acolyte mount
+	void useMount() const;
+	// List additive skill 
+	virtual void listAvailableSkill();
 private:
 	int skillNumber;
 	Skill *yourAcolyteSkillList;

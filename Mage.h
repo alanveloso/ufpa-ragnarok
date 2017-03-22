@@ -38,6 +38,10 @@ public:
 	void thunderstorm() const;
 	// Add skill of mage skill list
 	void addSkill(const Skill &);
+	// User mage mount
+	void useMount() const;
+	// List additive skill 
+	virtual void listAvailableSkill();
 private:
 	int skillNumber;
 	Skill *yourMageSkillList;

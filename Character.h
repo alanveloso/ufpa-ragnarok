@@ -28,6 +28,10 @@ public:
 	}
 	// Print character info
 	virtual void printInfo() const;
+	// Use mount
+	virtual void useMount() const;
+	// List additive skill 
+	virtual void listAvailableSkill();
 private:
 	string name;
 	const string sex;

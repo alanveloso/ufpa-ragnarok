@@ -91,6 +91,7 @@ const Merchant &Merchant::operator= (const Merchant &acolyte)
 // Print acolyte info
 void Merchant::printInfo() const
 {
+	cout << *this << endl;
 	cout << "Job Type:\t\tMerchant" << endl;
 	cout << "Race:\t\t\tHuman" << endl;
 	cout << "Changer At:\t\tAlberta" << endl;
@@ -142,4 +143,18 @@ void Merchant::addSkill(const Skill &skill)
 	{
 		cout << "I don't have points for distribute" << endl;
 	}
+}
+
+// User merchant mount
+void Merchant::useMount() const
+{
+	cout << "Savage equiped" << endl;
+}
+
+// List Available Skills
+void Merchant::listAvailableSkill() const 
+{
+	cout << "\tAvailable Skills" << endl;
+	for(int i = 0; i < 2; i++)
+		cout << AVAILABLE_MERCHANT_SKILLS[i] << endl;
 }
